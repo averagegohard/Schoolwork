@@ -1,0 +1,11 @@
+#include <stdio.h>
+main()
+{
+  char n[4];
+  int x;
+  printf("Enter a 3-digit non-negative number: ");
+  scanf("%s", n);
+  // perform conversion from ASCII bit representation to magnitude-only bit representation
+  x = 100*(n[0]-48) + 10*(n[1]-48) + (n[2]-48);
+  printf("The number is %i \n", x);
+}

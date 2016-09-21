@@ -1,0 +1,14 @@
+#
+# ps6pr2.txt (Problem Set 6, Problem 2)
+#
+# Computing a power by looping
+#
+# name:
+# email:
+#
+# If you worked with a partner, put his or her contact info below:
+# partner's name:
+# partner's email:
+#
+
+

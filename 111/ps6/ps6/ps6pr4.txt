@@ -1,0 +1,11 @@
+#
+# ps6pr4.txt (Problem Set 6, Problem 4)
+#
+# The Fibonacci sequence
+#
+# name:
+# email:
+#
+# This is an individual-only problem.
+#
+

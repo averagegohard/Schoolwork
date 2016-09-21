@@ -1,0 +1,39 @@
+#
+# ps4pr1.py - Problem Set 4, Problem 1
+#
+# From binary to decimal and back!
+#
+# name: keyan vakil
+# email: keyanv@bu.edu
+#
+# If you worked with a partner, put his or her contact info below:
+# partner's name:
+# partner's email:
+#
+def dec_to_bin(n):
+    """takes a non-negative integer n and converts it from decimal to binary"""
+    if(n==0):
+        return '0'
+    elif(n==1):
+        return '1'
+    else:
+        rest=dec_to_bin(n//2)
+        if(n%2==0):
+            return rest+'0'
+        else:
+            return rest+'1'
+
+def bin_to_dec(s):            
+    """ takes the string representation of a binary number and converts the number from binary to decimal, returning the resulting integer"""
+    if(s=='1'):
+        return 1
+    elif(s=='0'):
+        return 0
+    else:
+        rest=bin_to_dec(s[:-1])
+        if(s[-1]=='0'):
+            return rest
+        elif(s[-1]=='1'):
+            return 2*rest
+        else:
+            return "Error"

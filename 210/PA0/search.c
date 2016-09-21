@@ -1,0 +1,79 @@
+#include <stdio.h>
+// deffault array with length 12 given by instructors
+int Array[12] = {20, 13, 6, -1, 15, 29, 4, 2, 18, 10, -4, 15};
+
+// method copied from sort.c given by instructors that takes and array and its length as arguements, iterates through the values of the array and prints the values
+void PrintArray(int Arr[], int n) {
+  int i;
+  for (i=0; i < n; i++) {
+    // formatted print to add a space in between the values of the array
+    printf("%d ", Arr[i]);
+  }
+}
+
+// method copied from sort.c made by me to swap the location of two integer values
+void Swap(int *x, int *y) {
+  //use a temp variable to store the value of the pointer of x so that upon changing x the value can still be accessed
+  int temp;
+  temp = *x;
+  *x = *y;
+  *y = temp;
+}
+
+//method copied from sort.c and given by instructors that takes as input an array and its length that iteratively performs a Bubble sort on the contents of the array
+void BubbleSort(int Arr[], int n) {
+  int i, j;
+  // starts at last element of the unsorted part of the array and ends at the first element
+  for (i = n-2; i >= 0; i--) {
+    // starts at first element in the array and ends at the last element of the unsorted part of the array
+    for (j = 0; j <= i; j++) {
+      // swaps adjacent values in the array if the one closer to the beginning of the array is greater than the one closest to the end
+      if (Arr[j] > Arr[j+1]) {
+	Swap(&Arr[j], &Arr[j+1]);
+      }
+    }
+  }
+}
+
+// method created by me that, when inputted a sorted array and a key, performs a binary search on the array to print the key and its position
+int BinarySearch(int Arr[], int n, int k) {
+  // initializee lower and upper index bounds
+  int lower = 0;
+  int upper = n;
+  // examine the array until the lower bound is greater than the upper bound
+  while(lower <= upper){
+    // update the middle value after every iteration
+    int middle = (upper+lower)/2;
+    // if the key is equal to the middle value, print the value and the index and stop the method
+    if(k==Arr[middle]){
+      printf("%d was found at index %d\n",k,middle);
+      return middle;
+    }
+    // if the key  is greater than the value corresponding to the middle index, disregard the values less than or equal to the middle value by setting the lower bound to one more than the previous middle index
+    else if(k>Arr[middle]){
+      lower = middle + 1;
+    }
+    // if the key is less than the value corresponding to the middle index, disregard the values greater than or equal to the middle value by setting the upper bound to one less than the previous middle index
+    else if (k<Arr[middle]){
+      upper = middle - 1;
+    }
+  }
+  // if the lower value is greater than the upper value and the middle value has not been equal to the key, the key must not be in the array
+  printf("%d was not found in the array.\n",k);
+  
+}
+
+// main method
+int main() {
+  // performs bubble sort on the array
+  BubbleSort(Array, 12);
+  // prints the contents of the array
+  printf("The sorted array is: ");
+  PrintArray(Array, 12);
+  printf("\n");
+  printf("Enter key to search for: ");
+  int key;
+  scanf("%d", &key);
+  printf("Performing Binary search for %d\n", key);
+  BinarySearch(Array, 12, key);
+}

@@ -1,0 +1,27 @@
+public class Lab3{
+  public static void doubleArray(int a[]){
+    int i=0;
+    while(i<a.length){
+      a[i]=a[i]*2;
+      i++;
+    }
+  }
+  public static void zeroNegatives(int a[]){
+    int i=0;
+    while(i<a.length){
+      if(a[i]%2==1){
+       a[i]=0;
+      }
+    }
+  }
+  public static void reverseOriginalArray(int a[]){
+    
+  }
+  public static void zeroNegatives(int a[]){
+    
+  }
+  public static void zeroNegatives(int a[]){
+    
+  }
+
+}

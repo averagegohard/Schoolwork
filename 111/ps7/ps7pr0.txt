@@ -1,0 +1,12 @@
+#Keyan Vakil	keyanv@bu.edu
+1. I absolutely believe that computational models certainly help society more than it hurts society. 
+I believe that Powell provided a balanced report on the matter, but forgot to include that, ultimately, computers are controlled by humans, so one should blame the people who did not take such measures into account for the Wall Street Crisis.
+In other words, the prediction capabilities of computer models are based on human assumptions in some way (ie Dr Mora and his students performed an arbitrary division of the earth in order to make the data more "relatable").
+Thus, it is hard to answer objectively whether computational models are "good" or "bad," since they are simply tools used by humans for "good" or "bad."
+However, it seems that the greatest harm from computational models are derived from mistakes, and are not intentionally being used to hurt society.
+
+2. Based on the information from the Wall Street article, the computational models for economics should be based more on mathematical factors instead of an understanding of a market.
+In this sense, the most efficient way to predict long term markets is through receiving and processing less data, rather than more.
+However, the computer models in the climate change article "contain acknowledged problems" due to the sheer amount of data that must be processed.
+Despite this, I don't believe that there is a way to "ensure" models are correct, simply because there is too much data to consider.
+For example, even if there was a compututational model of everything that exists on earth from bacteria to mountains, an unexpected meteor could enter the atmosphere and mess up the computer since it would try to find something on Earth that caused the meteor to come.

@@ -1,0 +1,22 @@
+#
+# ps6pr3.txt (Problem Set 6, Problem 3, Tasks 1 and 2)
+#
+# Pseudorandom number generator
+#
+# name:
+# email:
+#
+# If you worked with a partner, put his or her contact info below:
+# partner's name:
+# partner's email:
+#
+# Your values for a and c when m == 100:
+#     a:
+#     c:
+#
+
+00   read r1           # input a
+01   read r2           # input c
+02   read r3           # input m
+03   read r4           # input x_0
+04   read r5           # input n

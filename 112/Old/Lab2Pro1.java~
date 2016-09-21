@@ -1,0 +1,21 @@
+//Keyan Vakil    keyanv@bu.edu
+import java.util.Scanner;
+public class Lab2Pro1{
+  public static void main(String[]args){
+    Scanner in=new Scanner(System.in);
+    int []a=[];
+    int sum;
+    System.out.println("Enter 10 integers:");
+    for(i=0;i<=10;i++){
+      a[i]=Scanner.nextInt();
+      sum+=a[i];
+    }
+    System.out.println("Array: " + a);
+    System.out.println("Sum of elements in array: " + sum);
+    System.out.println("Array: " + a);
+    System.out.println("Array: " + a);
+    System.out.println("Array: " + a);
+    
+    
+  }
+}

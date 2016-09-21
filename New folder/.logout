@@ -1,0 +1,6 @@
+# clear screen at logout
+clear
+
+# leave a fortune on the screen for the user
+#/usr/local/bin/fortune
+

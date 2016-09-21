@@ -1,0 +1,39 @@
+
+public class Sprite implements Soda, Packaging {
+ 
+ private double numCalories;
+ 
+
+ public double getNumCalories(){
+  
+ }
+ 
+ public boolean hasCaffeine(){
+  
+ }
+
+ public String getPackaging()
+ {
+  
+ }
+ 
+
+ public int compareTo(Soda S) {
+  
+   }
+ 
+ 
+    Sprite()
+     {
+      numCalories = 0;
+     }
+
+    Sprite(double aNumCalories)
+     {
+      numCalories = aNumCalories;
+     }
+
+    
+    
+ 
+}

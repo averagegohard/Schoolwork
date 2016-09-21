@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<limits.h>
+/*Determine whether arguments can be subtracted without overflow*/
+int tsub_ok(int x, int y){
+  //should return 1 if computation x-y does NOT overflow
+  int edited_y = (~y)+1;
+  int answer = x + edited_y;
+  int shift = (sizeof(int) << 3)-1;
+  int msb_x = (x >> shift);
+  int msb_y = (((~y)+1) >> shift);
+  int msb_answer = answer >> shift;
+  return (msb_x == msb_answer) || (msb_y == msb_answer);
+}
+
+main(){
+  printf("%d\n", tsub_ok(0,1));
+  printf("%d\n", tsub_ok(INT_MIN, 0));
+  printf("%d\n", tsub_ok(INT_MIN, 1));
+}

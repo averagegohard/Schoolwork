@@ -1,0 +1,21 @@
+//Keyan Vakil	keyanv@bu.edu
+1. The most interesting idea in this article was the fact that humans could actually beat it.
+Watson does an unfathomable amount of calculations per second.
+Additionally, all of these calculations are geared towards answering questions.
+Despite this, the human brain is still more complex.
+Humans also possess a wide array of other abilities besides answering questions.
+Thus, I find it interesting that we are insanely smarter than we think we are.
+
+2.Watson's technology could be used for almost anything if it is able to understand language. 
+For example, Watson could potentially be used as a personal butler.
+You could ask Watson to get you a glass of water, and Watson would understand your words and go perform the task.
+Additionally, you could explicitly state to Watson that you want water with ice, and Watson would still be able to understand.
+With this technology, it is possible that people will not have to do any chores in their house, since Watson could understand what the tasks entail, as well as understand the technicalities involved in performing such tasks.
+However, at the moment, it does not seem that Watson is at the level for any of these things to happen.
+
+3. Both Watson and humans have a level of uncertainty involved with their thought processes.
+However, Watson's is quantifiable and likely more accurate than humans, simply because it can receive more information faster than humans can.
+Nevertheless, humans seem to be better at understanding what information is more important than others.
+Watson seems to place too much weight on certain words or phrases and too little on others.
+This is likely since Watson doesn't have enough experience with certain types of problems.
+However, with practice, time, and more processing power, I believe Watson may have the ability to become an effective language machine.

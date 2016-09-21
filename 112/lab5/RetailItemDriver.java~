@@ -1,0 +1,253 @@
+import java.util.*;
+import java.awt.Color;
+
+
+/**
+ *
+ *  Drawing complexity graphs for sorting algorithms.
+ *
+ *  Author: Teaching Assistant hwwu@bu.edu
+ *  Credits: Prof Wayne Snyder and his team for past CS112 courses. 
+ * 
+ */
+public class SortingDriver {
+
+  public static final int MAXSIZE = 1000;
+
+  private Random r = new Random();
+
+  //
+  //  input related
+  //
+  private int[] genRandomArray(int size) {
+    int[] a = new int[size];
+    for (int i = 0; i < size; i++) 
+      a[i] = r.nextInt();
+
+    return a;
+  }
+
+  private int[] genAlmostSortedArray(int size, double percent) {
+    int[] a = genRandomArray(size);
+    Arrays.sort(a);
+
+    for (int i = 0; i < size * percent; i++) {
+      int x = r.nextInt(size);
+      int y = r.nextInt(size);
+
+      int tmp = a[x];
+      a[x] = a[y];
+      a[y] = tmp;
+    }
+
+    return a;
+  }
+
+  //
+  //  utils
+  //
+  public static void printArrayWithIndices(int[] a){
+
+    System.out.println("-----------------------");
+
+    for (int i = 0; i < a.length; i++)
+      System.out.format("|%5d|%15d|%n", i, a[i]);
+
+    System.out.println("-----------------------");
+    System.out.println();
+  }
+
+  public static void swap(int[] a, int m, int n) {
+    int tmp = a[m];
+    a[m] = a[n];
+    a[n] = tmp;
+  }
+
+  //
+  //  output related
+  //
+  private boolean isSorted(int[] a) {
+    for (int i = 0; i < a.length - 1; i++) 
+      if (a[i] > a[i+1])
+        return false;
+
+    return true;
+  }
+
+  //
+  //  timing related
+  //
+  private long startTime;
+  private long elapsedTimeInMilliSec;
+
+  private SortingDriver startTimer() {
+    startTime = System.nanoTime();
+    return this;
+  }
+
+  private SortingDriver stopTimer() {
+    elapsedTimeInMilliSec = (System.nanoTime() - startTime)/1000000;
+    return this;
+  }
+
+  //
+  //  drawing related
+  //
+  private double lastX, lastY;
+  private double textY, textLineHeight;
+  
+  public SortingDriver initCanvas() {
+    StdDraw.setXscale(0, SortingDriver.MAXSIZE);
+    StdDraw.setYscale(0, SortingDriver.MAXSIZE * 50);
+    StdDraw.setPenRadius(0.002);
+    lastX = 0;
+    lastY = 0;
+    textY = SortingDriver.MAXSIZE * 50 * 0.9;
+    textLineHeight = SortingDriver.MAXSIZE * 50 * 0.04;
+    return this;
+  }
+
+  private SortingDriver color(Color color) {
+    StdDraw.setPenColor(color);
+    return this;
+  } 
+
+  private SortingDriver radius(double r) {
+    StdDraw.setPenRadius(r);
+    return this;
+  }
+
+  private SortingDriver from(double x, double y) {
+    lastX = x;
+    lastY = y;
+    return this;
+  }
+
+  private SortingDriver to(double x, double y) {
+    StdDraw.line(lastX, lastY, x, y);
+    lastX = x;
+    lastY = y;
+    return this;
+  }
+
+  private SortingDriver text(String str) {
+    StdDraw.textLeft(50, textY, str);
+    textY -= textLineHeight;
+
+    return this;
+  }
+
+  //
+  //  sorting related
+  //
+  private long bubbleSort(int[] a) {
+    long numOfCompare = 0;
+    long numOfSwap = 0;
+    
+    startTimer();
+    for (int i = a.length - 1; i > 0; i--) {
+      for (int j = 0; j < i; j++) {
+        if (a[j] > a[j+1]) {
+          swap(a, j, j+1);
+        }
+        numOfCompare++;
+      }
+    }
+    stopTimer();
+
+    assert isSorted(a);
+
+    return numOfCompare;
+  }
+
+  public SortingDriver testBubbleSort() {
+    this
+    .color(StdDraw.RED)
+    .from(0, 0)
+    .text("Bubble Sort");
+
+    for (int i = 0; i <= MAXSIZE; i++) {
+      this.to(i, bubbleSort(genRandomArray(i)));
+    }
+    
+    return this;
+  }
+
+  private long selectionSort(int[] a) {
+    
+  }
+
+  public SortingDriver testSelectionSort() {
+    
+  }
+
+  private long insertionSort(int[] a) {
+
+    for (int i = 1; i < a.length; i++) {
+      for (int j = i; j > 0 && a[j] < a[j-1]; j--) {
+          swap(a, j, j-1);
+      }
+    }
+
+    assert isSorted(a);
+
+    return 0;
+  }
+
+  public SortingDriver testInsertionSort() {
+    return this;
+  }
+
+  private long quickSort(int[] a) {
+
+    quickSortHelper(a, 0, a.length - 1);
+
+    assert isSorted(a);
+
+    return 0;
+  }
+  
+  private long quickSortHelper(int[] a, int m, int n) {
+    int oldm = m;
+    int oldn = n;
+
+    int pivot = m;
+    int turn = 1;
+    while (m < n) {
+      if (a[pivot] > a[n]) {
+        swap(a, pivot, n);
+        pivot = n;
+        turn = 0;
+      } else if (a[pivot] < a[m]) {
+        swap(a, pivot, m);
+        pivot = m;
+        turn = 1;
+      }
+      if (turn == 0) 
+        m++;
+      else 
+        n--;
+
+    }
+
+    int a = oldm < m-1 ? quickSortHelper(a, oldm, m - 1) : 0;
+    int b = m+1 < oldn ? quickSortHelper(a, m + 1, oldn) : 0;
+
+    return 0;
+  }
+
+  public SortingDriver testQuickSort() {    
+    return this;
+  }
+
+  public static void main(String[] args) {
+
+    SortingDriver driver = new SortingDriver();
+    driver
+      .initCanvas()
+      .testBubbleSort()
+      .testSelectionSort()
+      .testInsertionSort()
+      .testQuickSort();
+  }
+}

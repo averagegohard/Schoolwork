@@ -1,0 +1,13 @@
+#Keyan Vakil	keyanv@bu.edu
+
+1. The most interesting part of the article to me was proabbly Dr Qian's game.
+This was a very unique way to determine if we can store and access information from a "computer" smaller than no other.
+Additionally, this basic design of using fluorescent proteins could pave the way to future developments in the field.
+What is most interesting about this, however, is that the implications of such a "game" could really create a large impact with a volume of a cubic micron.
+Soon, we may use biology instead of chemistry to make computers better.
+
+2.The kinds of programs solved by the DNA is similar to the powers_of function we made in problem set two.
+The DNA computer can, instead of solving for the powers of numbers, determine the square root of numbers.
+Still, both take a number or two as input, perform some sort of simple process to the number until a desire output is reached. 
+Afterwards, they display their output.
+With regards to Dr Qian's game, it seems similar to the scrabble_score function we wrote in that the responses by the scientists were proabably given weights, which were then processed.

@@ -1,0 +1,11 @@
+import java.util.Scanner;
+public class CashRegisterDriver{
+  public static void main(String[]args){
+    Scanner in = new Scanner(System.in);
+    System.out.println("Do you want to purchase a 'Jacket', 'Designer Jeans', or a 'Shirt'?");
+    String item=in.nextLine();
+    System.out.println("How many items do you want to purchase?");
+    int quantity=in.nextInt();
+    System.out.print(item+quantity);
+  }
+}

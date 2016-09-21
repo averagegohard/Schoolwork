@@ -1,0 +1,18 @@
+#
+# ps6pr1.txt (Problem Set 6, Problem 1)
+#
+# Cubic countdown
+#
+# name:
+# email:
+#
+# If you worked with a partner, put his or her contact info below:
+# partner's name:
+# partner's email:
+#
+
+00   read r1          # get # from user and store it in r1
+01   write r1         # print the value of r1
+02   addn r1 1        # add 1 to r1
+03   jumpn 01         # jump to line 01
+04   halt             # never halts! (use Ctrl-C)

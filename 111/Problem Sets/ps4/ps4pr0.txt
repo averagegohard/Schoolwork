@@ -1,0 +1,11 @@
+#keyan vakil	keyanv@bu.edu
+1. The "most preventable" aspect of the bug would be the fact that the "backup" unit had the same exact software in my opinion. 
+I don't understand why they trusted that their backup software would work any better than their original software. 
+Indeed, it seems quite silly that they overlooked the possibility of a software failure. 
+They should have at least tested their software before running the rocket and determine the errors while testing the software.
+
+2. I agree with this statement wholeheartedly.
+Hardware is influenced by a plethora of outside forces and many factors that humans can't neccessarily understand to its fullest extent.
+Software, however, is 100% made by humans.
+Thus, if software does not function as intended, it cannot possibily be a problem with outside forces at all, but the programmers themselves should be at fault.
+While hardware problems could be caused by human error, software problems are always caused by human error.
