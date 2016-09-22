@@ -1,0 +1,5 @@
+*.class
+.cache/
+.emacs.d/
+.bash_history
+.viminfor
