@@ -1,0 +1,229 @@
+R version 3.3.1 (2016-06-21) -- "Bug in Your Hair"
+Copyright (C) 2016 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> ?read.csv
+> read.csv('/tmp/grades.csv')
+   class1 class2 class3
+1     3.3    3.3    2.7
+2     2.7    3.7    2.3
+3     3.7    3.0    4.0
+4     2.3    3.7    2.7
+5     4.0    2.3    3.7
+6     3.3    3.7    3.3
+7     3.3    3.3    2.0
+8     3.0    3.0    3.3
+9     3.0    2.7    2.3
+10    3.7    4.0    3.0
+11    4.0    3.7    3.3
+12    3.3    3.0    2.3
+13    2.7    3.3    3.0
+14    2.7    3.7    3.3
+15    3.7    3.7    3.7
+16    4.0    2.3    3.7
+17    3.3    2.7    3.0
+18    3.3    3.0    2.3
+19    3.0    3.0    2.7
+20    3.7    3.3    2.7
+21    4.0    3.7    4.0
+22    3.3    3.7    2.3
+23    3.7    4.0    3.0
+24    4.0    3.3    2.0
+25    3.7    2.7    4.0
+26    4.0    2.0    3.3
+27    3.0    2.3    3.0
+28    2.3    2.7    3.3
+29    2.3    3.0    3.7
+30    4.0    3.0    2.0
+31    2.7    3.7    2.0
+32    3.7    3.0    3.7
+33    3.3    3.0    2.3
+34    4.0    4.0    2.3
+35    3.7    3.0    3.7
+36    4.0    2.3    3.3
+37    3.3    3.3    2.0
+38    3.7    2.7    3.0
+39    3.0    3.0    3.3
+40    3.7    3.0    3.0
+41    3.7    3.0    3.0
+42    2.3    3.7    4.0
+43    4.0    3.0    2.7
+44    4.0    3.3    3.7
+45    3.0    3.3    2.7
+46    3.0    3.3    3.0
+47    4.0    2.3    3.7
+48    3.3    2.3    3.3
+49    3.0    3.3    4.0
+50    3.0    3.7    3.3
+51    4.0    4.0    3.7
+52    3.7    3.0    3.0
+53    3.7    3.3    2.7
+54    3.7    3.0    4.0
+55    4.0    3.0    2.0
+56    2.7    2.3    4.0
+57    3.3    3.0    2.0
+> ?View
+> x <- read.csv('/tmp/grades.csv')
+> x
+   class1 class2 class3
+1     3.3    3.3    2.7
+2     2.7    3.7    2.3
+3     3.7    3.0    4.0
+4     2.3    3.7    2.7
+5     4.0    2.3    3.7
+6     3.3    3.7    3.3
+7     3.3    3.3    2.0
+8     3.0    3.0    3.3
+9     3.0    2.7    2.3
+10    3.7    4.0    3.0
+11    4.0    3.7    3.3
+12    3.3    3.0    2.3
+13    2.7    3.3    3.0
+14    2.7    3.7    3.3
+15    3.7    3.7    3.7
+16    4.0    2.3    3.7
+17    3.3    2.7    3.0
+18    3.3    3.0    2.3
+19    3.0    3.0    2.7
+20    3.7    3.3    2.7
+21    4.0    3.7    4.0
+22    3.3    3.7    2.3
+23    3.7    4.0    3.0
+24    4.0    3.3    2.0
+25    3.7    2.7    4.0
+26    4.0    2.0    3.3
+27    3.0    2.3    3.0
+28    2.3    2.7    3.3
+29    2.3    3.0    3.7
+30    4.0    3.0    2.0
+31    2.7    3.7    2.0
+32    3.7    3.0    3.7
+33    3.3    3.0    2.3
+34    4.0    4.0    2.3
+35    3.7    3.0    3.7
+36    4.0    2.3    3.3
+37    3.3    3.3    2.0
+38    3.7    2.7    3.0
+39    3.0    3.0    3.3
+40    3.7    3.0    3.0
+41    3.7    3.0    3.0
+42    2.3    3.7    4.0
+43    4.0    3.0    2.7
+44    4.0    3.3    3.7
+45    3.0    3.3    2.7
+46    3.0    3.3    3.0
+47    4.0    2.3    3.7
+48    3.3    2.3    3.3
+49    3.0    3.3    4.0
+50    3.0    3.7    3.3
+51    4.0    4.0    3.7
+52    3.7    3.0    3.0
+53    3.7    3.3    2.7
+54    3.7    3.0    4.0
+55    4.0    3.0    2.0
+56    2.7    2.3    4.0
+57    3.3    3.0    2.0
+> View(x)
+> summary(x)
+     class1        class2          class3    
+ Min.   :2.3   Min.   :2.000   Min.   :2.00  
+ 1st Qu.:3.0   1st Qu.:3.000   1st Qu.:2.70  
+ Median :3.3   Median :3.000   Median :3.00  
+ Mean   :3.4   Mean   :3.133   Mean   :3.04  
+ 3rd Qu.:3.7   3rd Qu.:3.700   3rd Qu.:3.70  
+ Max.   :4.0   Max.   :4.000   Max.   :4.00  
+> std(x)
+Error: could not find function "std"
+> ?sd
+> sd(x)
+Error in is.data.frame(x) : 
+  (list) object cannot be coerced to type 'double'
+> sd(x[0])
+[1] NA
+> x[0]
+data frame with 0 columns and 57 rows
+> sd(x['class1'])
+Error in is.data.frame(x) : 
+  (list) object cannot be coerced to type 'double'
+> class1
+Error: object 'class1' not found
+> x.class1
+Error: object 'x.class1' not found
+> x.1
+Error: object 'x.1' not found
+> x[,'class1']
+ [1] 3.3 2.7 3.7 2.3 4.0 3.3 3.3 3.0 3.0 3.7 4.0 3.3 2.7 2.7 3.7 4.0
+[17] 3.3 3.3 3.0 3.7 4.0 3.3 3.7 4.0 3.7 4.0 3.0 2.3 2.3 4.0 2.7 3.7
+[33] 3.3 4.0 3.7 4.0 3.3 3.7 3.0 3.7 3.7 2.3 4.0 4.0 3.0 3.0 4.0 3.3
+[49] 3.0 3.0 4.0 3.7 3.7 3.7 4.0 2.7 3.3
+> std[x,'class1']
+Error: object 'std' not found
+> sd[x,'class1']
+Error in sd[x, "class1"] : object of type 'closure' is not subsettable
+> sd(x['class1'])
+Error in is.data.frame(x) : 
+  (list) object cannot be coerced to type 'double'
+> sd(x[,'class1'])
+[1] 0.5199588
+> sd(x[,'class2'])
+[1] 0.5043855
+> sd(x[,'class3'])
+[1] 0.6447202
+> ?box
+> ?boxplot
+> boxplot(x)
+> # the line inside of the box represents the median value for the grades
+> # the top of the box represents the value under which about 75% of the other data points are located
+> # the bottom of the box represents the value under which about 25% of the other data points are located
+> ?length
+> length(x[,'class1'])
+[1] 57
+> length(x[,'class2'])
+[1] 57
+> ?table
+> table(x[,'class1']/length(x[,'class1']))
+
+0.0403508771929824 0.0473684210526316 0.0526315789473684 
+                 4                  5                  9 
+0.0578947368421053 0.0649122807017544 0.0701754385964912 
+                11                 14                 14 
+> table([x[,'class1']])
+Error: unexpected '[' in "table(["
+> table([x[,'class1'])
+Error: unexpected '[' in "table(["
+> table(x[,'class1'])
+
+2.3 2.7   3 3.3 3.7   4 
+  4   5   9  11  14  14 
+> table(x[,'class1'])/length(x[,'class1'])
+
+       2.3        2.7          3        3.3        3.7          4 
+0.07017544 0.08771930 0.15789474 0.19298246 0.24561404 0.24561404 
+> table(x[,'class2'])/length(x[,'class2'])
+
+         2        2.3        2.7          3        3.3        3.7 
+0.01754386 0.12280702 0.08771930 0.31578947 0.19298246 0.19298246 
+         4 
+0.07017544 
+> table(x[,'class3'])/length(x[,'class3'])
+
+        2       2.3       2.7         3       3.3       3.7         4 
+0.1228070 0.1228070 0.1228070 0.1754386 0.1754386 0.1578947 0.1228070 
+> plot(table(x[,'class1'])/length(x[,'class1']))
+> plot(table(x[,'class2'])/length(x[,'class2']))
+> plot(table(x[,'class3'])/length(x[,'class3']))
+> 

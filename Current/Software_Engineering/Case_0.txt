@@ -1,0 +1,7 @@
+Keyan Vakil
+1. According to the Certificate Of Completion, there are 38,000 words in the article.
+2. TMitTB stands for The Man in the Taupe Blazer. (Who wears a taupe blazer?)
+3. The program is written in a language called K.
+4. The blue square person says "Now you've done it" and all of the elements on the screen move towards the bottom of the page as if they are falling.I believe this is a reference to Google Gravity, which also causes the page to similarly collapse.
+5. According to the author, one of the most beautiful things about programming is version control.
+6. TMiTB and his team are using Node.js with the Express framework so that it's all JavaScript in the frontend and the backend.
